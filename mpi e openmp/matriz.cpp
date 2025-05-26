@@ -45,7 +45,7 @@ int main(int argc, char **argv) {
     int fim = inicio + linhas_processar;
 
     // Paralelização com OpenMP
-    #pragma omp parallel for schedule(static)
+    #pragma omp parallel for schedule(runtime)
     for (int r = inicio; r < fim; ++r) {
         for (int c = 0; c < max_column; ++c) {
             complex<float> z;
